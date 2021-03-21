@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
-const FriendListItem = ({ id, avatar, name, isOnline }) => (
-  <li key={id}>
+const FriendListItem = ({ avatar, name, isOnline }) => (
+  <li>
     <span className="status"></span>
     <img className="avatar" src={avatar} alt={name} width="48" />
     <p className="name">{name}</p>
@@ -9,7 +9,6 @@ const FriendListItem = ({ id, avatar, name, isOnline }) => (
 );
 
 FriendListItem.propTypes = {
-  id: PropTypes.number.isRequired,
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
