@@ -1,13 +1,15 @@
 .statistics {
   width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   background-color: rgb(231, 229, 229);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
 
 .title {
   margin: 0;
   padding: 20px 0;
   text-align: center;
+  border-bottom: 1px solid grey;
 }
 
 .statlist {
@@ -23,8 +25,11 @@
   align-items: center;
   width: 20%;
   padding: 10px;
-  background: tomato;
-  border: 1px solid black;
+  color: white;
+}
+
+.item:not(:last-child) {
+  border-right: 1px solid grey;
 }
 
 .percentage {
