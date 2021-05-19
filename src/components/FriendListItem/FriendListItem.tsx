@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import styles from './FriendListItem.module.css';
 
 interface IFriendsData {
@@ -15,10 +15,10 @@ const FriendListItem = ({ avatar, name, isOnline }: IFriendsData) => (
   </li>
 );
 
-FriendListItem.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  isOnline: PropTypes.bool.isRequired,
-};
+// FriendListItem.propTypes = {
+//   avatar: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+//   isOnline: PropTypes.bool.isRequired,
+// };
 
 export default FriendListItem;
