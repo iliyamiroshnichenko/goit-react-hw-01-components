@@ -1,8 +1,22 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import styles from './Profile.module.css';
 import defaultImage from './default.jpg';
 
-const Profile = ({ name, tag, location, avatar, stats }) => (
+interface IStats {
+  followers: number;
+  views: number;
+  likes: number;
+}
+
+interface IProfile {
+  name: string;
+  tag: string;
+  location: string;
+  avatar: string;
+  stats: IStats;
+}
+
+const Profile = ({ name, tag, location, avatar, stats }: IProfile) => (
   <div className={styles.profile}>
     <div className={styles.description}>
       <img className={styles.avatar} src={avatar} alt="Аватар пользователя" />
@@ -32,16 +46,16 @@ Profile.defaultProps = {
   stats: { followers: 0, views: 0, likes: 0 },
 };
 
-Profile.propTypes = {
-  name: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string,
-  stats: PropTypes.shape({
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
-  }),
-};
+// Profile.propTypes = {
+//   name: PropTypes.string.isRequired,
+//   tag: PropTypes.string.isRequired,
+//   location: PropTypes.string.isRequired,
+//   avatar: PropTypes.string,
+//   stats: PropTypes.shape({
+//     followers: PropTypes.number.isRequired,
+//     views: PropTypes.number.isRequired,
+//     likes: PropTypes.number.isRequired,
+//   }),
+// };
 
 export default Profile;

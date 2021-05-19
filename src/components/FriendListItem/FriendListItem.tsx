@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import styles from './FriendListItem.module.css';
 
-const FriendListItem = ({ avatar, name, isOnline }) => (
+interface IFriendsData {
+  avatar: string;
+  name: string;
+  isOnline: boolean;
+}
+
+const FriendListItem = ({ avatar, name, isOnline }: IFriendsData) => (
   <li className={styles.item}>
     <span className={isOnline ? styles.online : styles.offline}></span>
     <img className={styles.avatar} src={avatar} alt={name} width="48" />

@@ -3,7 +3,18 @@ import styles from './Statistics.module.css';
 
 const randomColor = () => '#' + Math.random().toString(16).substr(2, 6);
 
-const Statistics = ({ title, stats }) => (
+interface IStatsData {
+  id: string;
+  label: string;
+  percentage: number;
+}
+
+interface IStatistics {
+  title: string;
+  stats: IStatsData[];
+}
+
+const Statistics = ({ title, stats }: IStatistics) => (
   <section className={styles.statistics}>
     {title && <h2 className={styles.title}>{title}</h2>}
 

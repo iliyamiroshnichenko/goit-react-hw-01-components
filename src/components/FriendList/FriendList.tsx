@@ -2,7 +2,18 @@ import PropTypes from 'prop-types';
 import styles from './FriendList.module.css';
 import FriendListItem from '../FriendListItem/FriendListItem';
 
-const FriendList = ({ friends }) => (
+interface IFriendsData {
+  avatar: string;
+  name: string;
+  isOnline: boolean;
+  id: number;
+}
+
+interface IFriends {
+  friends: IFriendsData[];
+}
+
+const FriendList = ({ friends }: IFriends) => (
   <ul className={styles.list}>
     {friends.map(({ id, avatar, name, isOnline }) => (
       <FriendListItem

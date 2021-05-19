@@ -1,7 +1,18 @@
 import PropTypes from 'prop-types';
 import styles from './TransactionHistory.module.css';
 
-const TransactionHistory = ({ items }) => (
+interface ITransactionsData {
+  id: string;
+  type: string;
+  amount: string;
+  currency: string;
+}
+
+interface ITransactions {
+  items: ITransactionsData[];
+}
+
+const TransactionHistory = ({ items }: ITransactions) => (
   <table className={styles.table}>
     <thead>
       <tr>
